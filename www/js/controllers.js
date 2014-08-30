@@ -15,6 +15,7 @@ angular.module('starter.controllers', [])
 
 .controller('SettingsCtrl', function($scope, Settings) {
   $scope.wpm = Settings.getWPM();
+  $scope.fullStopPause = Settings.getFullStopPause();
 
   this.increaseWPM = function(){
     currentWPM = Settings.getWPM();
@@ -22,7 +23,7 @@ angular.module('starter.controllers', [])
       currentWPM.value = (parseInt(currentWPM.value) + 50).toString();
       localStorage['wpmvalue'] = currentWPM.value;
     }
-  };
+  }
 
   this.decreaseWPM = function(){
     currentWPM = Settings.getWPM();
@@ -30,7 +31,24 @@ angular.module('starter.controllers', [])
       currentWPM.value = (parseInt(currentWPM.value) - 50).toString();
       localStorage['wpmvalue'] = currentWPM.value;
     }
-  };
+  }
+
+  this.increaseFullStopPauseValue = function(){
+    currentFullStopPause = Settings.getFullStopPause();
+    if( parseFloat(currentFullStopPause.value) < 10.0 ){
+      currentFullStopPause.value = (parseFloat(currentFullStopPause.value) + 0.125).toString();
+      localStorage['fullstoppause'] = currentFullStopPause.value;
+    }
+  }
+
+  this.decreaseFullStopPauseValue = function(){
+    currentFullStopPause = Settings.getFullStopPause();
+    if( parseFloat(currentFullStopPause.value) > 0 ){
+      currentFullStopPause.value = (parseFloat(currentFullStopPause.value) - 0.125).toString();
+      localStorage['fullstoppause'] = currentFullStopPause.value;
+    }
+    
+  }
 })
 
 .controller('PasteTextCtrl', function($scope, SpeedReadText){

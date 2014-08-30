@@ -7,7 +7,7 @@
           <div class="col col-20 centered">
             <button class="button ion-minus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.decreaseWPM()"></button>
           </div>
-          <div class="col col-60 centered largefont">{{wpm.value}}</div>
+          <div class="col col-60 centered largefont">{{ wpm.value }}</div>
           <div class="col col-20 centered">
             <button class="button ion-plus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.increaseWPM()"></button>
           </div>
@@ -18,11 +18,11 @@
       <ion-item>
         <div class="row">
           <div class="col col-20 centered">
-            <button class="button ion-minus-round button-positive rounded-button" style="font-size:x-large;"></button>
+            <button class="button ion-minus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.decreaseFullStopPauseValue()"></button>
           </div>
-          <div class="col col-60 centered largefont">1 Second</div>
+          <div class="col col-60 centered largefont">{{ fullStopPause.value }} Second</div>
           <div class="col col-20 centered">
-            <button class="button ion-plus-round button-positive rounded-button" style="font-size:x-large;"></button>
+            <button class="button ion-plus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.increaseFullStopPauseValue()"></button>
           </div>
         </div> 
       </ion-item>

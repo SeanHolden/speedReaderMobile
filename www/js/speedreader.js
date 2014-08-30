@@ -29,7 +29,7 @@ function SpeedReader(){
   var status = 'stopped';
   var counterPaused = 0;
   var originalReadspeed = 700;
-  var fullStopPauseMultiplier = 0.75;
+  var fullStopPauseMultiplier = parseFloat(localStorage['fullstoppause']) || 0;
   var commaPauseMultiplier = 0.125;
   var colonPauseMultiplier = 0.5;
   var wordsArray = null;

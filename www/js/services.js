@@ -37,10 +37,14 @@ angular.module('starter.services', [])
 
 .factory('Settings', function(){
   var wpm = { value: localStorage['wpmvalue'] || '350'};
+  var fullStopPause = { value: localStorage['fullstoppause'] || '0.75'};
 
   return {
     getWPM: function(){
       return wpm;
+    },
+    getFullStopPause: function(){
+      return fullStopPause;
     }
   }
 });

@@ -6,8 +6,8 @@ function init(){
 function initializeButtons(reader){
   var toggleButton = document.getElementById('togglebutton');
   var resetbutton = document.getElementById('resetbutton');
-  var fullStopSpeedIncrease = document.getElementById('increasefullstopspeed');
-  var fullStopSpeedDecrease = document.getElementById('decreasefullstopspeed');
+  // var fullStopSpeedIncrease = document.getElementById('increasefullstopspeed');
+  // var fullStopSpeedDecrease = document.getElementById('decreasefullstopspeed');
   // var wpmUp = document.getElementById('wpmup');
   // var wpmDown = document.getElementById('wpmdown');
   var commaPauseSpeedUp = document.getElementById('increasecommaspeed');
@@ -32,12 +32,12 @@ function initializeButtons(reader){
     document.getElementById('wordarea').innerHTML = '';
   }
 
-  fullStopSpeedIncrease.onclick = function(){
-    reader.fullStopPauseUp();
-  }
-  fullStopSpeedDecrease.onclick = function(){
-    reader.fullStopPauseDown();
-  }
+  // fullStopSpeedIncrease.onclick = function(){
+  //   reader.fullStopPauseUp();
+  // }
+  // fullStopSpeedDecrease.onclick = function(){
+  //   reader.fullStopPauseDown();
+  // }
   // wpmUp.onclick = function(){
   //   reader.wpmUp(function(wpm){
   //     document.getElementById('wpm').innerHTML = wpm;
