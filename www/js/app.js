@@ -67,12 +67,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state('tab.account', {
-      url: '/account',
+    .state('tab.pastetext', {
+      url: '/pastetext',
       views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-account.html',
-          controller: 'AccountCtrl'
+        'tab-pastetext': {
+          templateUrl: 'templates/tab-pastetext.html',
+          controller: 'PasteTextCtrl'
         }
       }
     });

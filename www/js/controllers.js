@@ -22,5 +22,6 @@ angular.module('starter.controllers', [])
   this.saveText = function(newText){
     oldText = SpeedReadText.get();
     oldText.value = newText;
+    localStorage['speedreadtext'] = newText;
   }
 });

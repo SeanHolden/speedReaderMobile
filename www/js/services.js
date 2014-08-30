@@ -26,7 +26,7 @@ angular.module('starter.services', [])
 })
 
 .factory('SpeedReadText', function(){
-  var text = { value: "" };
+  var text = { value: localStorage['speedreadtext'] || "" };
 
   return {
     get: function(){
