@@ -28,3 +28,15 @@
   color:red;
   position:absolute;
 }
+
+.centered{
+  text-align:center;
+}
+
+button.rounded-button{
+  border-radius:100%;
+}
+
+.largefont{
+  font-size:large;
+}
