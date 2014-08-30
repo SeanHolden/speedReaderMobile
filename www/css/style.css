@@ -1,1 +1,30 @@
-/* Empty. Add your own CSS if you like */
+#container{
+  text-align:center;
+}
+
+#container textarea{
+  margin:auto;
+  width:50%;
+  min-height:100px;
+}
+
+#wordarea{
+  font-weight:bold;
+  font-size:3em;
+  padding:0.3em;
+  width:50%;
+  margin:1em auto 1em auto;
+  /*border:2px solid black;*/
+  height:56px;
+  /*border-radius: 10px;*/
+}
+
+#beginning, #end{
+  position:absolute;
+  left:50%;
+}
+
+#middlechar{
+  color:red;
+  position:absolute;
+}

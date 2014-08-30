@@ -1,6 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, SpeedReadText) {
+  init();
   $scope.textString = SpeedReadText.get();
 })
 
@@ -12,7 +13,7 @@ angular.module('starter.controllers', [])
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('SettingsCtrl', function($scope) {
 })
 
 .controller('PasteTextCtrl', function($scope, SpeedReadText){

@@ -1,7 +1,45 @@
 <ion-view title="Dashboard">
   <ion-content class="has-header padding">
 
-    <p>{{ textString.value }}</p>
+    <div id="container">
+      
+      <div class="vertical-line"></div>
+      <p id="wordarea" style=""></p>
+      <div class="vertical-line"></div>
+
+
+      <br />
+      <hr />
+    </div>
+
+    <div class="options">
+      <button id="togglebutton">Play</button>
+        <button id="resetbutton">Reset</button>
+        <button id="wpmup">WPM +</button>
+        <button id="wpmdown">WPM -</button>
+        <button id="increasefullstopspeed">Full Stop Pause Length +</button>
+        <button id="decreasefullstopspeed">Full Stop Pause Length -</button>
+        <button id="increasecommaspeed">Comma Pause Length +</button>
+        <button id="decreasecommaspeed">Comma Pause Length -</button>
+        <button id="increasecolonspeed">Colon/Semi-colon Pause Length +</button>
+        <button id="decreasecolonspeed">Colon/Semi-colon Pause Length -</button>
+        <div>
+          <button id="previoussentence">&lt;</button>
+          <button id="nextsentence">&gt;</button>
+        </div>
+      <br />
+    </div>
+
+    <div>
+      <p>Full Stop Pause: <span id="fullstopspeed"></span></p>
+      <p>Comma Pause: <span id="commaspeed"></span></p>
+      <p>Colon/Semi-colon Pause: <span id="colonspeed"></span></p>
+      <p>WPM: <span id="wpm"></span></p>
+    </div>
+
+    <hr />
+    
+    <textarea id="textinput" style="display:none;">{{ textString.value }}</textarea>
 
   </ion-content>
 </ion-view>
