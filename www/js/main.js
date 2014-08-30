@@ -8,8 +8,8 @@ function initializeButtons(reader){
   var resetbutton = document.getElementById('resetbutton');
   var fullStopSpeedIncrease = document.getElementById('increasefullstopspeed');
   var fullStopSpeedDecrease = document.getElementById('decreasefullstopspeed');
-  var wpmUp = document.getElementById('wpmup');
-  var wpmDown = document.getElementById('wpmdown');
+  // var wpmUp = document.getElementById('wpmup');
+  // var wpmDown = document.getElementById('wpmdown');
   var commaPauseSpeedUp = document.getElementById('increasecommaspeed');
   var commaPauseSpeedDown = document.getElementById('decreasecommaspeed');
   var colonPauseSpeedUp = document.getElementById('increasecolonspeed');
@@ -38,16 +38,16 @@ function initializeButtons(reader){
   fullStopSpeedDecrease.onclick = function(){
     reader.fullStopPauseDown();
   }
-  wpmUp.onclick = function(){
-    reader.wpmUp(function(wpm){
-      document.getElementById('wpm').innerHTML = wpm;
-    });
-  }
-  wpmDown.onclick = function(){
-    reader.wpmDown(function(wpm){
-      document.getElementById('wpm').innerHTML = wpm;
-    });
-  }
+  // wpmUp.onclick = function(){
+  //   reader.wpmUp(function(wpm){
+  //     document.getElementById('wpm').innerHTML = wpm;
+  //   });
+  // }
+  // wpmDown.onclick = function(){
+  //   reader.wpmDown(function(wpm){
+  //     document.getElementById('wpm').innerHTML = wpm;
+  //   });
+  // }
   commaPauseSpeedUp.onclick = function(){
     reader.commaPauseUp();
   }

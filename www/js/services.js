@@ -33,4 +33,14 @@ angular.module('starter.services', [])
       return text;
     }
   }
+})
+
+.factory('Settings', function(){
+  var wpm = { value: localStorage['wpmvalue'] || '350'};
+
+  return {
+    getWPM: function(){
+      return wpm;
+    }
+  }
 });

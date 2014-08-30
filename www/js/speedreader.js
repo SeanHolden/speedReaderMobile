@@ -35,7 +35,7 @@ function SpeedReader(){
   var wordsArray = null;
   var wordsArrayFull = null;
   var sentenceEndIndexes;
-  var WPM = 350;
+  var WPM = parseInt(localStorage['wpmvalue']) || 350;
   var readspeed = availableSpeeds[WPM];
   var fullstopPause = readspeed+(fullStopPauseMultiplier*1000);
   var commaPause = readspeed+(commaPauseMultiplier*1000);

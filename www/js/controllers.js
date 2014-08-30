@@ -13,7 +13,24 @@ angular.module('starter.controllers', [])
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('SettingsCtrl', function($scope) {
+.controller('SettingsCtrl', function($scope, Settings) {
+  $scope.wpm = Settings.getWPM();
+
+  this.increaseWPM = function(){
+    currentWPM = Settings.getWPM();
+    if( parseInt(currentWPM.value) < 1000 ){
+      currentWPM.value = (parseInt(currentWPM.value) + 50).toString();
+      localStorage['wpmvalue'] = currentWPM.value;
+    }
+  };
+
+  this.decreaseWPM = function(){
+    currentWPM = Settings.getWPM();
+    if( parseInt(currentWPM.value) > 50 ){
+      currentWPM.value = (parseInt(currentWPM.value) - 50).toString();
+      localStorage['wpmvalue'] = currentWPM.value;
+    }
+  };
 })
 
 .controller('PasteTextCtrl', function($scope, SpeedReadText){

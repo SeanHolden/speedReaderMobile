@@ -1,15 +1,15 @@
 <ion-view title="Settings">
   <ion-content class="has-header">
-    <ion-list>
+    <ion-list ng-controller="SettingsCtrl as settings">
       <div class="item item-divider centered">Words Per Minute (WPM)</div>
       <ion-item>
         <div class="row">
           <div class="col col-20 centered">
-            <button class="button ion-minus-round button-positive rounded-button" style="font-size:x-large;"></button>
+            <button class="button ion-minus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.decreaseWPM()"></button>
           </div>
-          <div class="col col-60 centered largefont">350</div>
+          <div class="col col-60 centered largefont">{{wpm.value}}</div>
           <div class="col col-20 centered">
-            <button class="button ion-plus-round button-positive rounded-button" style="font-size:x-large;"></button>
+            <button class="button ion-plus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.increaseWPM()"></button>
           </div>
         </div> 
       </ion-item>
