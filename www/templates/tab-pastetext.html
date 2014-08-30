@@ -1,11 +1,19 @@
 <ion-view title="Paste Text">
   <ion-content class="has-header padding" ng-controller="PasteTextCtrl as textCtrl">
-    <h1>Text Input</h1>
+
+
+      <!-- <div class="padding"> -->
+        <button ng-click="textCtrl.resetText()" class="button button-small button-positive" style="margin-bottom:10px;">
+          <i style="font-size:large;" class="ion-refresh"></i>&nbsp;<strong>Clear Text</strong>
+        </button>
+      <!-- </div> -->
 
       <label class="item item-input">
         <textarea ng-model="snippet" rows="20" placeholder="Type or paste text into this area..." ng-change="textCtrl.saveText(snippet)">
         </textarea>
       </label>
+
+
 
   </ion-content>
 </ion-view>

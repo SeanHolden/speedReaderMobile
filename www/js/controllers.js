@@ -24,4 +24,11 @@ angular.module('starter.controllers', [])
     oldText.value = newText;
     localStorage['speedreadtext'] = newText;
   }
+
+  this.resetText = function(){
+    oldText = SpeedReadText.get();
+    oldText.value = "";
+    $scope.snippet = "";
+    localStorage['speedreadtext'] = "";
+  }
 });
