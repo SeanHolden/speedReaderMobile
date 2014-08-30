@@ -1,0 +1,10 @@
+<ion-view title="Account">
+  <ion-content class="has-header padding" ng-controller="PasteTextCtrl as textCtrl">
+    <h1>Text Input</h1>
+
+      <label class="item item-input">
+        <textarea ng-model="snippet" placeholder="Type or paste text into this area..." ng-change="textCtrl.saveText(snippet)"></textarea>
+      </label>
+
+  </ion-content>
+</ion-view>
