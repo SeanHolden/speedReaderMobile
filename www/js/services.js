@@ -38,6 +38,7 @@ angular.module('starter.services', [])
 .factory('Settings', function(){
   var wpm = { value: localStorage['wpmvalue'] || '350'};
   var fullStopPause = { value: localStorage['fullstoppause'] || '0.75'};
+  var commaPause = { value: localStorage['commapause'] || '0.125'};
 
   return {
     getWPM: function(){
@@ -45,6 +46,9 @@ angular.module('starter.services', [])
     },
     getFullStopPause: function(){
       return fullStopPause;
+    },
+    getCommaPause: function(){
+      return commaPause;
     }
   }
 });

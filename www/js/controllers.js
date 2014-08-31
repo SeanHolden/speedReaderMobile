@@ -16,9 +16,10 @@ angular.module('starter.controllers', [])
 .controller('SettingsCtrl', function($scope, Settings) {
   $scope.wpm = Settings.getWPM();
   $scope.fullStopPause = Settings.getFullStopPause();
+  $scope.commaPause = Settings.getCommaPause();
 
   this.increaseWPM = function(){
-    currentWPM = Settings.getWPM();
+    var currentWPM = Settings.getWPM();
     if( parseInt(currentWPM.value) < 1000 ){
       currentWPM.value = (parseInt(currentWPM.value) + 50).toString();
       localStorage['wpmvalue'] = currentWPM.value;
@@ -26,7 +27,7 @@ angular.module('starter.controllers', [])
   }
 
   this.decreaseWPM = function(){
-    currentWPM = Settings.getWPM();
+    var currentWPM = Settings.getWPM();
     if( parseInt(currentWPM.value) > 50 ){
       currentWPM.value = (parseInt(currentWPM.value) - 50).toString();
       localStorage['wpmvalue'] = currentWPM.value;
@@ -34,7 +35,7 @@ angular.module('starter.controllers', [])
   }
 
   this.increaseFullStopPauseValue = function(){
-    currentFullStopPause = Settings.getFullStopPause();
+    var currentFullStopPause = Settings.getFullStopPause();
     if( parseFloat(currentFullStopPause.value) < 10.0 ){
       currentFullStopPause.value = (parseFloat(currentFullStopPause.value) + 0.125).toString();
       localStorage['fullstoppause'] = currentFullStopPause.value;
@@ -42,12 +43,27 @@ angular.module('starter.controllers', [])
   }
 
   this.decreaseFullStopPauseValue = function(){
-    currentFullStopPause = Settings.getFullStopPause();
+    var currentFullStopPause = Settings.getFullStopPause();
     if( parseFloat(currentFullStopPause.value) > 0 ){
       currentFullStopPause.value = (parseFloat(currentFullStopPause.value) - 0.125).toString();
       localStorage['fullstoppause'] = currentFullStopPause.value;
     }
-    
+  }
+
+  this.increaseCommaPauseValue = function(){
+    var currentCommaPause = Settings.getCommaPause();
+    if( parseFloat(currentCommaPause.value) < 10.0 ){
+      currentCommaPause.value = (parseFloat(currentCommaPause.value) + 0.125).toString();
+      localStorage['commapause'] = currentCommaPause.value;
+    }
+  }
+
+  this.decreaseCommaPauseValue = function(){
+    var currentCommaPause = Settings.getCommaPause();
+    if( parseFloat(currentCommaPause.value) > 0 ){
+      currentCommaPause.value = (parseFloat(currentCommaPause.value) - 0.125).toString();
+      localStorage['commapause'] = currentCommaPause.value;
+    }
   }
 })
 

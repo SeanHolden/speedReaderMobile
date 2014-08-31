@@ -30,7 +30,7 @@ function SpeedReader(){
   var counterPaused = 0;
   var originalReadspeed = 700;
   var fullStopPauseMultiplier = parseFloat(localStorage['fullstoppause']) || 0;
-  var commaPauseMultiplier = 0.125;
+  var commaPauseMultiplier = parseFloat(localStorage['commapause']) || 0;
   var colonPauseMultiplier = 0.5;
   var wordsArray = null;
   var wordsArrayFull = null;
@@ -42,9 +42,9 @@ function SpeedReader(){
   var colonPause = readspeed+(colonPauseMultiplier*1000);
 
   function init(){
-    document.getElementById('fullstopspeed').innerHTML = fullStopPauseMultiplier+' Seconds';
-    document.getElementById('wpm').innerHTML = WPM;
-    document.getElementById('commaspeed').innerHTML = commaPauseMultiplier+' Seconds';
+    // document.getElementById('fullstopspeed').innerHTML = fullStopPauseMultiplier+' Seconds';
+    // document.getElementById('wpm').innerHTML = WPM;
+    // document.getElementById('commaspeed').innerHTML = commaPauseMultiplier+' Seconds';
     document.getElementById('colonspeed').innerHTML = colonPauseMultiplier+' Seconds';
   }
 
@@ -111,19 +111,19 @@ function SpeedReader(){
     document.getElementById('fullstopspeed').innerHTML = fullStopPauseMultiplier+' Seconds';
   }
 
-  this.commaPauseUp = function(){
-    if( commaPauseMultiplier < 10.0  ){
-      commaPauseMultiplier += 0.125;
-    }
-    document.getElementById('commaspeed').innerHTML = commaPauseMultiplier+' Seconds';
-  }
+  // this.commaPauseUp = function(){
+  //   if( commaPauseMultiplier < 10.0  ){
+  //     commaPauseMultiplier += 0.125;
+  //   }
+  //   document.getElementById('commaspeed').innerHTML = commaPauseMultiplier+' Seconds';
+  // }
 
-  this.commaPauseDown = function(){
-    if( commaPauseMultiplier > 0  ){
-      commaPauseMultiplier -= 0.125;
-    }
-    document.getElementById('commaspeed').innerHTML = commaPauseMultiplier+' Seconds';
-  }
+  // this.commaPauseDown = function(){
+  //   if( commaPauseMultiplier > 0  ){
+  //     commaPauseMultiplier -= 0.125;
+  //   }
+  //   document.getElementById('commaspeed').innerHTML = commaPauseMultiplier+' Seconds';
+  // }
 
   this.colonPauseUp = function(){
     if( colonPauseMultiplier < 10.0  ){
