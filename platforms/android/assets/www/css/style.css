@@ -1,0 +1,60 @@
+#container{
+  text-align:center;
+}
+
+#container textarea{
+  margin:auto;
+  width:50%;
+  min-height:100px;
+}
+
+#wordarea{
+  font-weight:bold;
+  font-size:3em;
+  padding:0.3em;
+  width:50%;
+  margin:1em auto 1em auto;
+  /*border:2px solid black;*/
+  height:56px;
+  /*border-radius: 10px;*/
+}
+
+#beginning, #end{
+  position:absolute;
+  left:50%;
+}
+
+#middlechar{
+  color:red;
+  position:absolute;
+}
+
+.centered{
+  text-align:center;
+}
+
+button.rounded-button{
+  border-radius:100%;
+}
+
+.largefont{
+  font-size:large;
+}
+
+div.options{
+  /*margin-top:5em;*/
+}
+
+button#togglebutton{
+  font-size: 5em;
+  width: 1.4em;
+  height: 1.4em;
+}
+
+button#previoussentence{
+  margin-top: 1em;
+}
+
+button#nextsentence{
+  margin-top: 1em;
+}

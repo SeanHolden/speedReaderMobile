@@ -1,0 +1,26 @@
+<ion-view title="Paste Text">
+  <ion-content class="has-header padding" ng-controller="PasteTextCtrl as textCtrl" scroll="false">
+
+
+      <div class="row">
+        <div class="col col-25 centered">
+          <button ng-click="textCtrl.resetText()" class="button icon-left ion-refresh button-small button-positive" style="margin-bottom:10px;">
+            <strong>Clear Text</strong>
+          </button>
+        </div>
+        <div class="col col-25 col-offset-50 centered">
+          <button ng-click="textCtrl.loadTestText()" class="button icon-left ion-document-text button-small button-positive" style="margin-bottom:10px;">
+            <strong>Load Test</strong>
+          </button>
+        </div>
+      </div>
+
+      <label class="item item-input">
+        <textarea ng-model="snippet" rows="20" placeholder="Type or paste text into this area..." ng-change="textCtrl.saveText(snippet)">
+        </textarea>
+      </label>
+
+
+
+  </ion-content>
+</ion-view>

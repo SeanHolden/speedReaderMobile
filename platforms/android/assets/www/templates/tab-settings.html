@@ -1,0 +1,61 @@
+<ion-view title="Settings">
+  <ion-content class="has-header">
+    <ion-list ng-controller="SettingsCtrl as settings">
+      <div class="item item-divider centered">Words Per Minute (WPM)</div>
+      <ion-item>
+        <div class="row">
+          <div class="col col-20 centered">
+            <button class="button ion-minus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.decreaseWPM()"></button>
+          </div>
+          <div class="col col-60 centered largefont">{{ wpm.value }}</div>
+          <div class="col col-20 centered">
+            <button class="button ion-plus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.increaseWPM()"></button>
+          </div>
+        </div> 
+      </ion-item>
+
+      <div class="item item-divider centered">Full Stop Pause Length</div>
+      <ion-item>
+        <div class="row">
+          <div class="col col-20 centered">
+            <button class="button ion-minus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.decreaseFullStopPauseValue()"></button>
+          </div>
+          <div class="col col-60 centered largefont">{{ fullStopPause.value }} Second</div>
+          <div class="col col-20 centered">
+            <button class="button ion-plus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.increaseFullStopPauseValue()"></button>
+          </div>
+        </div> 
+      </ion-item>
+
+      <div class="item item-divider centered">Comma Pause Length</div>
+      <ion-item>
+        <div class="row">
+          <div class="col col-20 centered">
+            <button class="button ion-minus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.decreaseCommaPauseValue()"></button>
+          </div>
+          <div class="col col-60 centered largefont">{{ commaPause.value }} Second</div>
+          <div class="col col-20 centered">
+            <button class="button ion-plus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.increaseCommaPauseValue()"></button>
+          </div>
+        </div> 
+      </ion-item>
+
+      <div class="item item-divider centered">Colon/Semi-Colon Pause Length</div>
+      <ion-item>
+        <div class="row">
+          <div class="col col-20 centered">
+            <button class="button ion-minus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.decreaseColonPauseValue()"></button>
+          </div>
+          <div class="col col-60 centered largefont">{{ colonPause.value }} Second</div>
+          <div class="col col-20 centered">
+            <button class="button ion-plus-round button-positive rounded-button" style="font-size:x-large;" ng-click="settings.increaseColonPauseValue()"></button>
+          </div>
+        </div> 
+      </ion-item>
+
+    </ion-list>
+    
+
+
+  </ion-content>
+</ion-view>
