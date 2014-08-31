@@ -40,3 +40,21 @@ button.rounded-button{
 .largefont{
   font-size:large;
 }
+
+div.options{
+  /*margin-top:5em;*/
+}
+
+button#togglebutton{
+  font-size: 5em;
+  width: 1.4em;
+  height: 1.4em;
+}
+
+button#previoussentence{
+  margin-top: 1em;
+}
+
+button#nextsentence{
+  margin-top: 1em;
+}

@@ -12,18 +12,20 @@ function initializeButtons(reader){
   // var wpmDown = document.getElementById('wpmdown');
   // var commaPauseSpeedUp = document.getElementById('increasecommaspeed');
   // var commaPauseSpeedDown = document.getElementById('decreasecommaspeed');
-  var colonPauseSpeedUp = document.getElementById('increasecolonspeed');
-  var colonPauseSpeedDown = document.getElementById('decreasecolonspeed');
+  // var colonPauseSpeedUp = document.getElementById('increasecolonspeed');
+  // var colonPauseSpeedDown = document.getElementById('decreasecolonspeed');
   var nextSentence = document.getElementById('nextsentence');
   var previousSentence = document.getElementById('previoussentence');
 
   toggleButton.onclick = function(){
     if( reader.getStatus() === 'playing' ){
       reader.stop();
-      this.innerHTML = 'Play';
+      // this.innerHTML = 'Play';
+      this.setAttribute('class', 'button ion-play button-positive rounded-button');
     }else{
       reader.play();
-      this.innerHTML = 'Pause';
+      // this.innerHTML = 'Pause';
+      this.setAttribute('class', 'button ion-pause button-positive rounded-button');
     };
   }
   resetbutton.onclick = function(){
@@ -54,12 +56,12 @@ function initializeButtons(reader){
   // commaPauseSpeedDown.onclick = function(){
   //   reader.commaPauseDown();
   // }
-  colonPauseSpeedUp.onclick = function(){
-    reader.colonPauseUp();
-  }
-  colonPauseSpeedDown.onclick = function(){
-    reader.colonPauseDown();
-  }
+  // colonPauseSpeedUp.onclick = function(){
+  //   reader.colonPauseUp();
+  // }
+  // colonPauseSpeedDown.onclick = function(){
+  //   reader.colonPauseDown();
+  // }
   nextSentence.onclick = function(){
     reader.nextSentence();
   }
