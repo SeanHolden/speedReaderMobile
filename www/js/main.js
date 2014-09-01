@@ -21,11 +21,11 @@ function initializeButtons(reader){
     if( reader.getStatus() === 'playing' ){
       reader.stop();
       // this.innerHTML = 'Play';
-      this.setAttribute('class', 'button ion-play button-positive rounded-button');
+      this.setAttribute('class', 'play');
     }else{
       reader.play();
       // this.innerHTML = 'Pause';
-      this.setAttribute('class', 'button ion-pause button-positive rounded-button');
+      this.setAttribute('class', 'pause');
     };
   }
   resetbutton.onclick = function(){
@@ -34,34 +34,6 @@ function initializeButtons(reader){
     document.getElementById('wordarea').innerHTML = '';
   }
 
-  // fullStopSpeedIncrease.onclick = function(){
-  //   reader.fullStopPauseUp();
-  // }
-  // fullStopSpeedDecrease.onclick = function(){
-  //   reader.fullStopPauseDown();
-  // }
-  // wpmUp.onclick = function(){
-  //   reader.wpmUp(function(wpm){
-  //     document.getElementById('wpm').innerHTML = wpm;
-  //   });
-  // }
-  // wpmDown.onclick = function(){
-  //   reader.wpmDown(function(wpm){
-  //     document.getElementById('wpm').innerHTML = wpm;
-  //   });
-  // }
-  // commaPauseSpeedUp.onclick = function(){
-  //   reader.commaPauseUp();
-  // }
-  // commaPauseSpeedDown.onclick = function(){
-  //   reader.commaPauseDown();
-  // }
-  // colonPauseSpeedUp.onclick = function(){
-  //   reader.colonPauseUp();
-  // }
-  // colonPauseSpeedDown.onclick = function(){
-  //   reader.colonPauseDown();
-  // }
   nextSentence.onclick = function(){
     reader.nextSentence();
   }

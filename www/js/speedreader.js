@@ -41,13 +41,6 @@ function SpeedReader(){
   var commaPause = readspeed+(commaPauseMultiplier*1000);
   var colonPause = readspeed+(colonPauseMultiplier*1000);
 
-  function init(){
-    // document.getElementById('fullstopspeed').innerHTML = fullStopPauseMultiplier+' Seconds';
-    // document.getElementById('wpm').innerHTML = WPM;
-    // document.getElementById('commaspeed').innerHTML = commaPauseMultiplier+' Seconds';
-    // document.getElementById('colonspeed').innerHTML = colonPauseMultiplier+' Seconds';
-  }
-
   this.updateStatus = function(value){
     status = value;
   }
@@ -95,66 +88,8 @@ function SpeedReader(){
     sentenceEndIndexCounter=-1
     wordsArrayFull = null;
     // document.getElementById('togglebutton').innerHTML = 'Play';
-    document.getElementById('togglebutton').setAttribute('class', 'button ion-play button-positive rounded-button');
+    document.getElementById('togglebutton').setAttribute('class', 'play');
   }
-
-  this.fullStopPauseUp = function(){
-    if( fullStopPauseMultiplier < 10.0 ){
-      fullStopPauseMultiplier += 0.125;
-    }
-    document.getElementById('fullstopspeed').innerHTML = fullStopPauseMultiplier+' Seconds';
-  }
-
-  this.fullStopPauseDown = function(){
-    if( fullStopPauseMultiplier > 0 ){
-      fullStopPauseMultiplier -= 0.125;
-    }
-    document.getElementById('fullstopspeed').innerHTML = fullStopPauseMultiplier+' Seconds';
-  }
-
-  // this.commaPauseUp = function(){
-  //   if( commaPauseMultiplier < 10.0  ){
-  //     commaPauseMultiplier += 0.125;
-  //   }
-  //   document.getElementById('commaspeed').innerHTML = commaPauseMultiplier+' Seconds';
-  // }
-
-  // this.commaPauseDown = function(){
-  //   if( commaPauseMultiplier > 0  ){
-  //     commaPauseMultiplier -= 0.125;
-  //   }
-  //   document.getElementById('commaspeed').innerHTML = commaPauseMultiplier+' Seconds';
-  // }
-
-  // this.colonPauseUp = function(){
-  //   if( colonPauseMultiplier < 10.0  ){
-  //     colonPauseMultiplier += 0.125;
-  //   }
-  //   document.getElementById('colonspeed').innerHTML = colonPauseMultiplier+' Seconds';
-  // }
-
-  // this.colonPauseDown = function(){
-  //   if( colonPauseMultiplier > 0 ){
-  //     colonPauseMultiplier -= 0.125;
-  //   }
-  //   document.getElementById('colonspeed').innerHTML = colonPauseMultiplier+' Seconds';
-  // }
-
-  // this.wpmUp = function(callback){
-  //   // Don't let it go above 1000. This is the maximum.
-  //   if(WPM < 1000){
-  //     WPM += 50;
-  //   }
-  //   callback(WPM);
-  // }
-
-  // this.wpmDown = function(callback){
-  //   // Don't let it go below 50. This is the minimum.
-  //   if(WPM > 50){
-  //     WPM -= 50;
-  //   }
-  //   callback(WPM);
-  // }
 
   this.nextSentence = function(){
     skipToNextSentence();
@@ -168,7 +103,7 @@ function SpeedReader(){
 
   function skipToNextSentence(){
     // document.getElementById('togglebutton').innerHTML = 'Play';
-    document.getElementById('togglebutton').setAttribute('class', 'button ion-play button-positive rounded-button');
+    document.getElementById('togglebutton').setAttribute('class', 'play');
 
     if(status === 'playing'  ){
       reader.stop();
@@ -197,7 +132,7 @@ function SpeedReader(){
 
   function skipToPreviousSentence(){
     // document.getElementById('togglebutton').innerHTML = 'Play';
-    document.getElementById('togglebutton').setAttribute('class', 'button ion-play button-positive rounded-button');
+    document.getElementById('togglebutton').setAttribute('class', 'play');
 
     if(status === 'playing'  ){
       reader.stop();
@@ -280,7 +215,7 @@ function SpeedReader(){
       }else{
         reader.stop();
         // document.getElementById('togglebutton').innerHTML = 'Play';
-        document.getElementById('togglebutton').setAttribute('class', 'button ion-play button-positive rounded-button');
+        document.getElementById('togglebutton').setAttribute('class', 'play');
       };
 
     // below should be speed of a single word change in milliseconds
@@ -418,5 +353,4 @@ function SpeedReader(){
     sentenceEndIndexes = fullStopIndexes;
   }
 
-  init();
 }
