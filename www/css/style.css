@@ -59,11 +59,23 @@ button#nextsentence{
   margin-top: 2.5em;
 }
 
+i#resetbutton-icon{
+  font-size:x-large;
+  color:rgba(36, 36, 36, 0.8);
+  position:relative;
+  top:-3px;
+}
+
+i.plusminus-icons{
+  font-size:x-large;
+  color:rgba(36, 36, 36, 0.8);
+  font-weight:bold;
+}
+
 
 /* Start of media buttons css */
 menu {
   /* Play */
-  margin: 2em auto;
   text-align: center;
   position: relative;
 }
