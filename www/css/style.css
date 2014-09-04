@@ -72,6 +72,7 @@ menu button {
   display: inline-block;
   padding: .6em;
   background: linear-gradient(#ffffff, #cccccc), #c9c5c9;
+  /*background: linear-gradient(#f5f5f5, #b9b9b9), #c9c5c9;*/
   border-radius: 10em;
   border: 0 solid #d0d0d0;
   width: 8em;
@@ -98,11 +99,12 @@ menu .play:before {
   width: 0;
   height: 0;
   border: 2.4em solid transparent;
-  border-left-color: rgba(100, 100, 100, 0.8);
+  /*border-left-color: rgba(100, 100, 100, 0.8);*/
+  border-left-color: rgba(36, 36, 36, 0.8); /* <-- was just hover color */
   border-left-width: 3.6em;
 }
 menu .play:hover:before {
-  border-left-color: rgba(36, 36, 36, 0.8);
+  /*border-left-color: rgba(36, 36, 36, 0.8);*/
 }
 menu .stop:before {
   top: 2.24em;
@@ -120,7 +122,8 @@ menu .ff:after {
   height: 0;
   top: 2.08em;
   border: 2em solid transparent;
-  border-left-color: rgba(100, 100, 100, 0.8);
+  /*border-left-color: rgba(100, 100, 100, 0.8);*/
+  border-left-color: rgba(36, 36, 36, 0.8);
   border-left-width: 2.16em;
 }
 menu .ff:before {
@@ -132,7 +135,7 @@ menu .ff:after {
 }
 menu .ff:hover:before,
 menu .ff:hover:after {
-  border-left-color: rgba(36, 36, 36, 0.8);
+  /*border-left-color: rgba(36, 36, 36, 0.8);*/
 }
 menu .rw:before,
 menu .rw:after {
@@ -340,7 +343,8 @@ menu.small .ff:after {
   height: 0;
   top: 0.78em;
   border: 0.75em solid transparent;
-  border-left-color: rgba(100, 100, 100, 0.8);
+  /*border-left-color: rgba(100, 100, 100, 0.8);*/
+  border-left-color: rgba(36, 36, 36, 0.8);
   border-left-width: 0.81em;
 }
 menu.small .ff:before {
@@ -352,7 +356,7 @@ menu.small .ff:after {
 }
 menu.small .ff:hover:before,
 menu.small .ff:hover:after {
-  border-left-color: rgba(36, 36, 36, 0.8);
+  /*border-left-color: rgba(36, 36, 36, 0.8);*/
 }
 menu.small .rw:before,
 menu.small .rw:after {
@@ -360,7 +364,8 @@ menu.small .rw:after {
   height: 0;
   top: 0.78em;
   border: 0.75em solid transparent;
-  border-right-color: rgba(100, 100, 100, 0.8);
+  /*border-right-color: rgba(100, 100, 100, 0.8);*/
+  border-right-color: rgba(36, 36, 36, 0.8);
   border-right-width: 0.81em;
 }
 menu.small .rw:before {
@@ -372,7 +377,7 @@ menu.small .rw:after {
 }
 menu.small .rw:hover:after,
 menu.small .rw:hover:before {
-  border-right-color: rgba(36, 36, 36, 0.8);
+  /*border-right-color: rgba(36, 36, 36, 0.8);*/
 }
 menu.small .pause:before,
 menu.small .pause:after {
