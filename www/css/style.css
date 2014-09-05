@@ -45,12 +45,6 @@ div.options{
   /*margin-top:5em;*/
 }
 
-/*button#togglebutton{
-  font-size: 5em;
-  width: 1.4em;
-  height: 1.4em;
-}*/
-
 button#previoussentence{
   margin-top: 2.5em;
 }
@@ -70,6 +64,32 @@ i.plusminus-icons{
   font-size:x-large;
   color:rgba(36, 36, 36, 0.8);
   font-weight:bold;
+}
+
+i.play-icon{
+  right:-6px;
+  top:-2px;
+  font-size:5em;
+  color:rgba(36, 36, 36, 0.8);
+  font-weight:bold;
+  position:relative;
+}
+
+i.pause-icon{
+  right:-1px;
+  top:-2px;
+  font-size:5em;
+  color:rgba(36, 36, 36, 0.8);
+  font-weight:bold;
+  position:relative;
+}
+
+i.skipforward-icon{
+  font-size:3em;
+  color:rgba(36, 36, 36, 0.8);
+  position:relative;
+  top:-2px;
+  right:-2px;
 }
 
 

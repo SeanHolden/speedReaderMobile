@@ -21,11 +21,11 @@ function initializeButtons(reader){
     if( reader.getStatus() === 'playing' ){
       reader.stop();
       // this.innerHTML = 'Play';
-      this.setAttribute('class', 'play');
+      document.getElementById('togglebutton-icon').setAttribute('class', 'ion-play play-icon');
     }else{
       reader.play();
       // this.innerHTML = 'Pause';
-      this.setAttribute('class', 'pause');
+      document.getElementById('togglebutton-icon').setAttribute('class', 'ion-pause pause-icon');
     };
   }
   resetbutton.onclick = function(){

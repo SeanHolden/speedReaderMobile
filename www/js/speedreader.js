@@ -88,7 +88,7 @@ function SpeedReader(){
     sentenceEndIndexCounter=-1
     wordsArrayFull = null;
     // document.getElementById('togglebutton').innerHTML = 'Play';
-    document.getElementById('togglebutton').setAttribute('class', 'play');
+    document.getElementById('togglebutton-icon').setAttribute('class', 'ion-play play-icon');
   }
 
   this.nextSentence = function(){
@@ -103,7 +103,7 @@ function SpeedReader(){
 
   function skipToNextSentence(){
     // document.getElementById('togglebutton').innerHTML = 'Play';
-    document.getElementById('togglebutton').setAttribute('class', 'play');
+    document.getElementById('togglebutton-icon').setAttribute('class', 'ion-play play-icon');
 
     if(status === 'playing'  ){
       reader.stop();
@@ -132,7 +132,7 @@ function SpeedReader(){
 
   function skipToPreviousSentence(){
     // document.getElementById('togglebutton').innerHTML = 'Play';
-    document.getElementById('togglebutton').setAttribute('class', 'play');
+    document.getElementById('togglebutton-icon').setAttribute('class', 'ion-play play-icon');
 
     if(status === 'playing'  ){
       reader.stop();
@@ -215,7 +215,7 @@ function SpeedReader(){
       }else{
         reader.stop();
         // document.getElementById('togglebutton').innerHTML = 'Play';
-        document.getElementById('togglebutton').setAttribute('class', 'play');
+        document.getElementById('togglebutton-icon').setAttribute('class', 'ion-play play-icon');
       };
 
     // below should be speed of a single word change in milliseconds
