@@ -92,6 +92,14 @@ i.skipforward-icon{
   right:-2px;
 }
 
+i.skipbackward-icon{
+  font-size:3em;
+  color:rgba(36, 36, 36, 0.8);
+  position:relative;
+  top:-2px;
+  right:2px;
+}
+
 
 /* Start of media buttons css */
 menu {
