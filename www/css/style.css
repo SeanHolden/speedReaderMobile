@@ -37,27 +37,42 @@ button.rounded-button{
   border-radius:100%;
 }
 
-.largefont{
+.largefont, .largefont p{
   font-size:large;
+  color:#444;
 }
 
 div.options{
-  /*margin-top:5em;*/
+  margin-top:5em;
 }
 
 button#previoussentence{
   margin-top: 2.5em;
+  position:absolute;
+  left:0.5em;
 }
 
 button#nextsentence{
   margin-top: 2.5em;
+  position:absolute;
+  right:0.5em;
+}
+
+button#resetbutton{
+  position:relative;
+  top:40px;
+}
+
+button#togglebutton{
+  /*position:relative;*/
+  /*left:17px;*/
 }
 
 i#resetbutton-icon{
-  font-size:x-large;
+  font-size:3em;
   color:rgba(36, 36, 36, 0.8);
   position:relative;
-  top:-3px;
+  top:-2px;
 }
 
 i.plusminus-icons{
@@ -100,6 +115,11 @@ i.skipbackward-icon{
   right:2px;
 }
 
+p.settings-values{
+  position:relative;
+  top:1.4em;
+}
+
 
 /* Start of media buttons css */
 menu {
@@ -117,7 +137,7 @@ menu button {
   border: 0 solid #d0d0d0;
   width: 8em;
   height: 8em;
-  margin-right: 20px;
+  /*margin-right: 20px;*/
   box-shadow: 0 0.48em 0.56em rgba(0, 0, 0, 0.4);
 }
 menu button:hover {
@@ -221,7 +241,7 @@ menu.medium {
   /* Pause */
 }
 menu.medium button {
-  position: relative;
+  /*position: relative;*/
   display: inline-block;
   padding: .6em;
   background: linear-gradient(#ffffff, #cccccc), #c9c5c9;
@@ -229,7 +249,7 @@ menu.medium button {
   border: 0 solid #d0d0d0;
   width: 5em;
   height: 5em;
-  margin-right: 20px;
+  /*margin-right: 20px;*/
   box-shadow: 0 0.3em 0.35000000000000003em rgba(0, 0, 0, 0.4);
 }
 menu.medium button:hover {
