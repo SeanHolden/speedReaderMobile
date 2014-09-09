@@ -43,8 +43,18 @@ button.rounded-button{
 }
 
 div.options{
-  margin-top:5em;
+  padding-top:5em;
+  height:100%;
+  background:#f8f8f8;
+  border-top:1px solid #a1a1a1;
+
+  /*box-shadow: 1 1em 1em rgba(0, 0, 0, 1);*/
 }
+
+div#pastetext-options{
+  margin-bottom:3em;
+}
+
 
 button#previoussentence{
   margin-top: 2.5em;
