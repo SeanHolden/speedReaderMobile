@@ -303,19 +303,14 @@ function SpeedReader(){
       longword = (word.length > 5) ? true : false;
     }
 
-    if( isOddNumberOfLetters(word) ){
-      minusValue = 0.5;
+    var middleCharIndexHash = {1:0,2:0,3:1,4:1,5:1,6:2,7:2,8:2,9:2,10:3,11:3,12:3,13:4,14:4,15:4,16:4,17:5,18:5,19:5,20:6};
+    var middleCharIndex;
+    if( word.length > 0 && word.length <= 20 ){
+      middleCharIndex = middleCharIndexHash[word.length];
     }else{
-      minusValue = 1;    
+      middleCharIndex = 0
     }
 
-    if( longword ){
-      divideValue = 1.5;
-    }else{
-      divideValue = 2.0;
-    }
-
-    var middleCharIndex = ( word.length - ( word.length/divideValue ) - minusValue);
     splitWord = [ word.slice(0,middleCharIndex),
                   word.slice(middleCharIndex,middleCharIndex+1),
                   word.slice(middleCharIndex+1,word.length) ];
