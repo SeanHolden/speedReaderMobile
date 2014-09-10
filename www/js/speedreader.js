@@ -1,3 +1,5 @@
+//TODO: choose points in which to reset localStorage values... e.g. on editing of pastetext.
+
 function SpeedReader(){
   // availableSpeeds -> WPM:Milliseconds
   var availableSpeeds = {
@@ -22,7 +24,7 @@ function SpeedReader(){
     950:63.16,
     1000:60
   };
-  var WORDCOUNTER=0;
+  var WORDCOUNTER = parseInt(localStorage['wordcounter']) || 0;
   var sentenceEndIndexCounter=-1;
 
   var reader = this;
@@ -34,12 +36,24 @@ function SpeedReader(){
   var colonPauseMultiplier = parseFloat(localStorage['colonpause']) || 0;
   var wordsArray = null;
   var wordsArrayFull = null;
-  var sentenceEndIndexes;
+  var sentenceEndIndexes = localStorage['sentenceendindexes'] ? JSON.parse(localStorage['sentenceendindexes']) : null;
+  // console.log(sentenceEndIndexes);
   var WPM = parseInt(localStorage['wpmvalue']) || 350;
   var readspeed = availableSpeeds[WPM];
   var fullstopPause = readspeed+(fullStopPauseMultiplier*1000);
   var commaPause = readspeed+(commaPauseMultiplier*1000);
   var colonPause = readspeed+(colonPauseMultiplier*1000);
+  singleLetterWord = parseInt(localStorage['singleletterword']);
+  document.getElementById('wordarea').innerHTML = localStorage['currentword'];
+
+  function initialSetCharPositions(singleLetterWord){
+    var middleChar = document.getElementById('middlechar');
+    if( middleChar && !singleLetterWord ){
+      setCharPositions(middleChar);
+    }else if(singleLetterWord){
+      setSingleCharPosition(middleChar);
+    }
+  }
 
   this.updateStatus = function(value){
     status = value;
@@ -52,6 +66,7 @@ function SpeedReader(){
   this.updateCounterPaused = function(value){
     counterPaused = value;
     WORDCOUNTER = WORDCOUNTER + 1;
+    localStorage['wordcounter'] = WORDCOUNTER.toString();
   }
 
   this.play = function(){
@@ -85,6 +100,7 @@ function SpeedReader(){
     // reader.updateCounterPaused(0);
     reader.stop();
     WORDCOUNTER = 0;
+    localStorage['wordcounter'] = WORDCOUNTER.toString();
     sentenceEndIndexCounter=-1
     wordsArrayFull = null;
     // document.getElementById('togglebutton').innerHTML = 'Play';
@@ -113,7 +129,7 @@ function SpeedReader(){
     }
 
     if (WORDCOUNTER < sentenceEndIndexes[0]){
-      WORDCOUNTER = sentenceEndIndexes[0]
+      WORDCOUNTER = sentenceEndIndexes[0];
     }else if(WORDCOUNTER === wordsArrayFull.length-1){
       reader.stop();
     }else if(WORDCOUNTER >= sentenceEndIndexes[ sentenceEndIndexes.length-2 ]){
@@ -128,6 +144,7 @@ function SpeedReader(){
         }
       }
     }
+    localStorage['wordcounter'] = WORDCOUNTER.toString();
   }
 
   function skipToPreviousSentence(){
@@ -165,6 +182,7 @@ function SpeedReader(){
         }
       }
     }
+    localStorage['wordcounter'] = WORDCOUNTER.toString();
   }
 
   function cycleWords(words){
@@ -175,11 +193,14 @@ function SpeedReader(){
       var word = wordsArrayFull[WORDCOUNTER];
       var endOfWord;
       var singleLetterWord = false;
+      localStorage['singleletterword'] = 0;
+
 
       // Split word and color middle letter
       if(word.length === 1){
         endOfWord = word;
         singleLetterWord = true;
+        localStorage['singleletterword'] = 1;
         word = '<span id="middlechar">'+word+'</span>';
       }
       else if(word.length > 0){
@@ -189,8 +210,9 @@ function SpeedReader(){
         });
       }
 
-      // Display the current word on page
+      // Display the current word on page and save it in localstorage for if we exit and come back.
       document.getElementById('wordarea').innerHTML = '<span id="actualword">'+word+'</span>';
+      localStorage['currentword'] = '<span id="actualword">'+word+'</span>';
 
       // if middle char exists (e.g. not newline or anything) ... display pixels left and right
       var middleChar = document.getElementById('middlechar');
@@ -208,6 +230,7 @@ function SpeedReader(){
         if( endOfWord ){ pauseForPunctuation( endOfWord ) };
         if (status === 'playing'){
           WORDCOUNTER++;
+          localStorage['wordcounter'] = WORDCOUNTER.toString();
           cycleWords(WORDCOUNTER, wordsArrayFull.slice(WORDCOUNTER,wordsArrayFull.length));
         }else{
           reader.updateCounterPaused();
@@ -351,6 +374,9 @@ function SpeedReader(){
       }
     }
     sentenceEndIndexes = fullStopIndexes;
+    localStorage['sentenceendindexes'] = JSON.stringify(sentenceEndIndexes);
   }
+
+  initialSetCharPositions(singleLetterWord);
 
 }
