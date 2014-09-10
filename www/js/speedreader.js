@@ -1,5 +1,3 @@
-//TODO: choose points in which to reset localStorage values... e.g. on editing of pastetext.
-
 function SpeedReader(){
   // availableSpeeds -> WPM:Milliseconds
   var availableSpeeds = {
@@ -101,6 +99,7 @@ function SpeedReader(){
     reader.stop();
     WORDCOUNTER = 0;
     localStorage['wordcounter'] = WORDCOUNTER.toString();
+    localStorage['currentword'] = "";
     sentenceEndIndexCounter=-1
     wordsArrayFull = null;
     // document.getElementById('togglebutton').innerHTML = 'Play';

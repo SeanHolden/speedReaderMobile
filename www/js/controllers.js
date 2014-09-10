@@ -92,6 +92,11 @@ angular.module('starter.controllers', [])
     oldText = SpeedReadText.get();
     oldText.value = newText;
     localStorage['speedreadtext'] = newText;
+    // reset localStorage values on change
+    localStorage['sentenceendindexes'] = '';
+    localStorage['singleletterword'] = "";
+    localStorage['currentword'] = "";
+    localStorage['wordcounter'] = "";
   }
 
   this.resetText = function(){
