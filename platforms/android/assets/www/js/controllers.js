@@ -92,6 +92,7 @@ angular.module('starter.controllers', [])
     oldText = SpeedReadText.get();
     oldText.value = newText;
     localStorage['speedreadtext'] = newText;
+    resetLocalStorageValues();
   }
 
   this.resetText = function(){
@@ -99,6 +100,7 @@ angular.module('starter.controllers', [])
     oldText.value = "";
     $scope.snippet = "";
     localStorage['speedreadtext'] = "";
+    resetLocalStorageValues();
   }
 
   this.loadTestText = function(){
@@ -107,5 +109,13 @@ angular.module('starter.controllers', [])
     oldText.value = newText;
     $scope.snippet = newText;
     localStorage['speedreadtext'] = newText;
+  }
+
+  function resetLocalStorageValues(){
+    // reset localStorage values on change
+    localStorage['sentenceendindexes'] = '';
+    localStorage['singleletterword'] = "";
+    localStorage['currentword'] = "";
+    localStorage['wordcounter'] = "";
   }
 });

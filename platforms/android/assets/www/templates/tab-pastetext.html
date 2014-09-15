@@ -1,12 +1,12 @@
-<ion-view title="Paste Text">
+<ion-view title="Load Text">
   <ion-content class="has-header padding" ng-controller="PasteTextCtrl as textCtrl" scroll="false">
 
 
-      <div class="row">
+      <div class="row" id="pastetext-options">
         <div class="col col-25 centered">
-          <button ng-click="textCtrl.resetText()" class="button icon-left ion-refresh button-small button-positive" style="margin-bottom:10px;">
-            <strong>Clear Text</strong>
-          </button>
+          <menu class="medium">
+            <button ng-click="textCtrl.resetText()"><i class="ion-trash-b skipbackward-icon"></i></button>
+          </menu>
         </div>
         <div class="col col-25 col-offset-50 centered">
           <button ng-click="textCtrl.loadTestText()" class="button icon-left ion-document-text button-small button-positive" style="margin-bottom:10px;">

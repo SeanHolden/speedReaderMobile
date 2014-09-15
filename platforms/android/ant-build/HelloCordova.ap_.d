@@ -117,10 +117,13 @@
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/lib/ionic/scss/ionicons/ionicons.scss \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/plugins/com.ionic.keyboard \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/plugins/org.apache.cordova.device \
+/Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/plugins/org.apache.cordova.vibration \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/plugins/com.ionic.keyboard/www \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/plugins/com.ionic.keyboard/www/keyboard.js \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
+/Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/plugins/org.apache.cordova.vibration/www \
+/Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/plugins/org.apache.cordova.vibration/www/vibration.js \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/templates/friend-detail.html \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/templates/tab-dash.html \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/assets/www/templates/tab-friends.html \

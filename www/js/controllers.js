@@ -105,7 +105,7 @@ angular.module('starter.controllers', [])
 
   this.loadTestText = function(){
     oldText = SpeedReadText.get();
-    newText = "This is, some test-data.\n\nIt is a bunch, of text that will, allow me to make, sure if this app is working correctly, or not.\n\nIt will need commas, and things such as: colons and also, the next line will contain a semi-colon.\n\nThis is the line with the semi-colon; Pausing at the correct moments is important for the reader.\n\nIt is the era of an Old Horde, forged with steel rather than fel blood. A union of great orc clans, the Iron Horde, tramples the planet Draenor beneath terrifying war machines. Azeroth falls next. Worlds uncounted will follow.\n\nYou must mount a desperate charge on Draenor – savage home of orcs and adopted bastion of stoic draenei – at this pivotal moment. Your allies are legends from across time; your fortress a foothold in an alien land. Lead the armies of one world against another… before the future itself is unmade.";
+    newText = "This is, some test-data.\n\nIt is a bunch, of text that will, allow me to make, sure if this app is working correctly, or not.\n\nIt will need commas, and things such as: colons and also, the next line will contain a semi-colon.\n\nThis is the line with the semi-colon; Pausing at the correct moments is important for the reader.";
     oldText.value = newText;
     $scope.snippet = newText;
     localStorage['speedreadtext'] = newText;

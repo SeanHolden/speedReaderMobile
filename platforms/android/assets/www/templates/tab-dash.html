@@ -1,5 +1,5 @@
-<ion-view title="Dashboard">
-  <ion-content class="has-header padding" scroll="false">
+<ion-view title="">
+  <ion-content class="has-header" scroll="false">
 
     <div id="container">
       
@@ -9,37 +9,35 @@
 
 
       <br />
-      <hr />
     </div>
 
     <div class="options">
-    
+
       <div class="row">
         <div class="col col-20 centered">
-          <button class="button ion-refresh button-positive rounded-button" style="font-size:x-large;" id="resetbutton"></button>
-        </div>
-      </div>
-     
-      <div class="centered row">
-
-        <div class="col col-20 centered">
-          <button class="button ion-skip-backward button-positive rounded-button" style="font-size:x-large;" id="previoussentence"></button>
+          <menu class="medium">
+            <button class="" id="previoussentence"><i class="ion-skip-backward skipbackward-icon"></i></button>
+          </menu>
         </div>
         <div class="col col-60 centered">
-          <button class="button ion-play button-positive rounded-button" id="togglebutton"></button>
+          <menu>
+            <button id="togglebutton"><i id="togglebutton-icon" class="ion-play play-icon"></i></button>
+          </menu>
         </div>
         <div class="col col-20 centered">
-          <button class="button ion-skip-forward button-positive rounded-button" style="font-size:x-large;" id="nextsentence"></button>
+          <menu class="medium">
+            <button id="nextsentence"><i class="ion-skip-forward skipforward-icon"></i></button>
+          </menu>
         </div>
-  <!--         <button id="wpmup">WPM +</button>
-          <button id="wpmdown">WPM -</button> -->
-  <!--         <button id="increasefullstopspeed">Full Stop Pause Length +</button>
-          <button id="decreasefullstopspeed">Full Stop Pause Length -</button> -->
-  <!--         <button id="increasecommaspeed">Comma Pause Length +</button>
-          <button id="decreasecommaspeed">Comma Pause Length -</button> -->
-  <!--         <button id="increasecolonspeed">Colon/Semi-colon Pause Length +</button>
-          <button id="decreasecolonspeed">Colon/Semi-colon Pause Length -</button> -->
+      </div>
 
+      <div class="row">
+        <div class="col centered">
+          <!-- <button class="button ion-refresh button-positive rounded-button" style="font-size:x-large;" id="resetbutton"></button> -->
+          <menu class="medium">
+            <button class="reset" id="resetbutton"><i id="resetbutton-icon" class="ion-refresh"></i></button>
+          </menu>
+        </div>
       </div>
 
     </div>

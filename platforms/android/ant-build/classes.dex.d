@@ -11,4 +11,5 @@
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/ant-build/classes/com/ionicframework/starter/R$xml.class \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/ant-build/classes/com/ionicframework/starter/R.class \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
+/Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/ant-build/classes/org/apache/cordova/vibration/Vibration.class \
 /Users/seanbarton/Development/Apps/speedReaderMobile/platforms/android/ant-build/dexedLibs/classes-c8a343db5f19a9c4b8d11282c8012786.jar \
