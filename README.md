@@ -16,8 +16,6 @@ There are a few speed reader apps out there but I couldn't find a good one that 
 
 <b>How it looks:</b>
 
-Sorry they are different sizes, I just cut them out from the "Ripple" emulator in a rushed manner. The actual app is obviously all the same size. :)
-
 <img src="https://raw.githubusercontent.com/SeanHolden/speedReaderMobile/master/images/read.png" width="200" />
 <img src="https://raw.githubusercontent.com/SeanHolden/speedReaderMobile/master/images/pastetext.png" width="200" />
 <img src="https://raw.githubusercontent.com/SeanHolden/speedReaderMobile/master/images/settings.png" width="200" />
